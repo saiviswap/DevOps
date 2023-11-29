@@ -1,0 +1,60 @@
+Ansible adhoc commands                                           command ssh-keygen to create public key in target server 
+
+Ansible -i inventory all -m "shell" -a "df"
+
+differnce b/w adhoc commands vs playbooks
+
+adhoc commands used for 1 or 2 tasks
+
+playbooks are used for mutliple taks.
+
+task install nginx, restart nginx:
+
+step1: vim first-playbook.yml
+      
+        ---
+        - name: install and start nginx
+          host: all
+          become: root
+         
+          task:
+           - name: install nginx
+             apt: 
+                name: nginx
+                state: present
+           -name: start nginx
+            service:
+               name:nginx
+               state: started
+
+ansible-playbook -i inventory first-playbook.yml this command used for excute the yml file
+
+ansible-playbook -vvv -i inventory first-playbook.yml this command used for logs ( verbosity )
+
+ansible roles:
+
+mkdir second-playbook
+cd second-playbook
+ansible-galaxy role init kubernetes ( created kubernetes floder)
+inside kubernets:
+
+README.md : what is the content of the playbooks.
+
+defaults :basically used to store variable kind of things
+
+files : you want to store some files like certificates.
+
+handlers: basically used for handling some kind of exception ( any error is getting just send to you notification )
+
+tasks
+
+templates
+
+tests : used for unit tests.
+
+vars : basically used to store variable kind of things
+
+meta : meta basically used to write some metadata information inside this file ( ex: licensing info )
+
+
+

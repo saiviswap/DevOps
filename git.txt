@@ -1,0 +1,9 @@
+Git init = create git repo                                 .git floder head config hooks objects refs
+git add  = 
+git commit = 
+git push
+git status
+git diff = check changes that are made
+git log 
+git reset --hard commite id 
+git 

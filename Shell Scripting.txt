@@ -1,0 +1,88 @@
+ls list files 
+ls -ltr 
+                                                    
+cd change the dir  
+                                                
+cd.. back to one dir
+                                              
+cd../.. back to home dir 
+                                             
+touch cretae file        
+                                         
+cat display the inside the file   
+                                                                 
+mkdir to create folder  
+     
+nproc number of cpu 
+                                              
+free -g printing the memory 
+                                         
+df -h used memory disk
+                                            
+top complete info 
+                                                
+chmod 777 ( rwx) - grants permissions 
+
+Root group user
+
+4-read
+2-write
+1-ex
+
+ps -ef all information about the processes.
+
+grep only fetches the information that is required  
+
+| command does output of the first command send to the secound command 
+
+ps -ef | grep amazon | awk -f" " '{print $2}' to print paticuler process id's
+                                              
+set -x dubbing mode   
+
+set -e exit the script when there is an error.
+
+set -o pipefail                                            
+                                                                  
+curl in shell scripting curl is a module to interact with the apis ( extranl devices from internet)     
+
+logflow stdin stdout stderr
+
+date is system defult command so send to stdin bcz | not reviceing information 
+
+Find: using file location give 
+
+sudo su- swith to root user
+
+sudo find / -name filename search for the file in enter vm 
+
+                                                                                                                                                                                                                                                                                                                                                                                 
+                                                                                                                                                                                                                                                                   
+Project: Aws_resource_traker.shpwd present working dir  
+
+ #!/bin/bash
+
+#####################
+# author: sai
+# date :jan 11
+# version: v1 
+# this script will report the aws resource usage
+######################
+
+# aws s3
+# aws ec2
+# aws lambda
+# aws iam users
+
+# list s3 buckets
+aws s3 ls
+
+# list ec2 instances
+aws ec2 describe-instances
+
+# list lambda
+aws lambda list-functions
+
+# list i am users
+aws i am list-users
+
+

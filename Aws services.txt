@@ -1,0 +1,15 @@
+1.ec2 
+2.vpc
+3.EBS ( VOLUMES)
+4.S3  ( Storage)
+5.IAM
+6.CLOUD WATCH (Monitoring )
+7.Lamda ( serveless )
+8.cloud build service 
+9.aws configuration 
+10.billing 
+11.aws kms
+12.Cloud trail
+13.Aws EKS 
+14.fargate ecs
+15.ELK
