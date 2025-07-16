@@ -1,0 +1,97 @@
+Okta:
+
+Okta is a cloud-based identity and access management (IAM) platform that helps organizations securely manage and authenticate user identities for applications, devices, and services.
+
+Service in okta:
+SSO
+MFA
+User Life cycle management
+Directory Services
+API Access Management
+
+App integration types;
+
+1.okta integrated network (OIN): like play store.options will change app to app
+
+2.application integration wizard(AIW): custom app same options for any app
+
+okta integrated network:
+
+The Okta Integration Network (OIN) is a catalog of thousands of pre-built app integrations that allow Okta to connect easily with third-party tools, cloud services, and identity providers.
+
+step 1: 
+go to admin console 
+navigate: Applications 
+click on browse app catalog
+Search for application.
+
+Here different settings for diff applications
+
+Step 2:Genral settings ( from application team )
+application label
+instance type ( prod and sand or test )
+custom domain (speed-inspiration-1496)
+
+Step3: SSO Option (From application team)
+Choose the Sign-in Method (SAML,SWA,OIDC)
+Advance sign-on settings 
+login Url and logout url 
+
+Step 4:Assign the App
+Assign the App to user or grps
+
+Step 5: 
+Test the Integration
+
+Application integration wizard:
+
+The Application Integration Wizard (AIW) in Okta is a step-by-step tool that lets you create custom integrations for apps 
+
+Steps for integration:
+
+step 1: 
+go to admin console 
+navigate: Applications 
+click on create app integration.
+
+step 2:Choose the Sign-in Method
+like SWA SAML OIDC
+
+Step 3:Configure App Settings ( from application team )
+App name and logo
+Redirect URIs (for OIDC)
+SAML ACS URL and Entity ID (for SAML) 
+Login URL (for SWA)
+
+Step 4:Assign the App
+Assign the App to user or grps
+
+Step 5: 
+Test the Integration
+
+
+IDP Flow and SP flow:
+
+Sp Flow:The user tries to access the application (SP). The app redirects them to the Identity Provider (Okta) for authentication.
+
+1.End user access service provider (app )from Brower (edge or chrome).then sp flow starts 
+2.service provider redirects SAML req back to Brower 
+3.brower relays SAML Req to IDP
+4.IDP Identify the user
+5.Then idp generates  SAML asseration and send back to Brower.
+6.brower relays SAML asseration back to sp.
+7.if user authenticated sends sp sends security context to Brower .
+8.requset resource from sp
+9.sp responds with requested resource.
+
+IDP Flow: The user logs in directly to Okta (IdP) and then launches the app (SP) from the Okta dashboard.
+
+1.end user access SAML IDP Portal.
+2.the idp authenticate the user.
+3.idp generate  SAML asseration and send back to the brower
+4.brower relays SAML asseration Back to service provider.
+5.if user authentication sp sends security context to brower.
+6.requset the resource form sp.
+7.sp responds with requested resource to the brower. 
+    
+
